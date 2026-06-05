@@ -278,6 +278,196 @@ a {
     margin-top: 10px;
 }
 
+.survey-section {
+    margin-top: 26px;
+    padding: 30px;
+    border-radius: 34px;
+    background: rgba(232, 232, 232, 0.82);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 18px 34px rgba(0, 0, 0, 0.06);
+}
+
+.survey-heading {
+    max-width: 760px;
+}
+
+.survey-heading h2 {
+    margin: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(2.1rem, 5vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: 0;
+    color: #050505;
+    text-transform: uppercase;
+}
+
+.survey-heading p {
+    margin: 18px 0 0;
+    max-width: 34rem;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+    line-height: 1.45;
+}
+
+.question-grid,
+.open-grid,
+.analysis-grid {
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.question-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.open-grid,
+.analysis-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.question-card,
+.open-card,
+.analysis-grid article {
+    padding: 22px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.question-number {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.question-card h3,
+.open-card h3 {
+    margin: 0;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.32;
+}
+
+.question-options {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.pie-chart-box {
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) minmax(150px, 0.75fr);
+    gap: 22px;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.pie-wrap {
+    position: relative;
+    width: min(230px, 100%);
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+.pie-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    filter: drop-shadow(8px 10px 0 rgba(0, 0, 0, 0.06));
+}
+
+.pie-slices path {
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 1;
+}
+
+.pie-slices text {
+    color: #1d2433;
+    fill: #1d2433;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+}
+
+.pie-legend {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #0b0b0b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    font-weight: 700;
+}
+
+.pie-legend li {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.dot {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+
+.dot-blue {
+    background: #2f6fed;
+}
+
+.dot-red {
+    background: #e91b2d;
+}
+
+.dot-orange {
+    background: #df9024;
+}
+
+.dot-green {
+    background: #2c9a23;
+}
+
+.dot-purple {
+    background: #7048bd;
+}
+
+.open-card ul {
+    margin: 16px 0 0;
+    padding-left: 22px;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.open-card li + li {
+    margin-top: 8px;
+}
+
+.analysis-grid article {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.analysis-grid p {
+    margin: 0;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+    line-height: 1.55;
+    text-align: justify;
+}
+
+.analysis-grid p + p {
+    margin-top: 18px;
+}
+
 .topics-intro,
 .topic-section {
     margin-top: 26px;
@@ -411,6 +601,12 @@ a {
         min-height: auto;
     }
 
+    .question-grid,
+    .open-grid,
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
     .topic-section {
         min-height: auto;
         padding: 34px 28px;
@@ -464,6 +660,35 @@ a {
         margin-top: 20px;
         padding: 16px;
         border-radius: 24px;
+    }
+
+    .survey-section {
+        margin-top: 20px;
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .survey-heading {
+        max-width: none;
+    }
+
+    .question-card,
+    .open-card,
+    .analysis-grid article {
+        padding: 18px;
+    }
+
+    .pie-chart-box {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .pie-wrap {
+        width: min(210px, calc(100% - 76px));
+    }
+
+    .pie-legend {
+        gap: 10px;
     }
 
     .info-card--large {
